@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.txtLabel = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1082, 301);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(13, 76);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(835, 251);
+            this.dataGridView.TabIndex = 0;
             // 
             // label1
             // 
@@ -53,35 +53,38 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Pesquisa";
             // 
-            // txtPesquisa
+            // txtLabel
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(87, 48);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(257, 20);
-            this.txtPesquisa.TabIndex = 2;
+            this.txtLabel.Location = new System.Drawing.Point(87, 48);
+            this.txtLabel.Name = "txtLabel";
+            this.txtLabel.Size = new System.Drawing.Size(257, 20);
+            this.txtLabel.TabIndex = 2;
+            this.txtLabel.TextChanged += new System.EventHandler(this.txtLabel_TextChanged);
             // 
             // btnCadastro
             // 
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCadastro.Location = new System.Drawing.Point(857, 389);
+            this.btnCadastro.Location = new System.Drawing.Point(611, 344);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(237, 49);
             this.btnCadastro.TabIndex = 3;
             this.btnCadastro.Text = "Cadastro de Banco de Dados!";
             this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 450);
+            this.ClientSize = new System.Drawing.Size(861, 450);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.txtPesquisa);
+            this.Controls.Add(this.txtLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,9 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPesquisa;
+        private System.Windows.Forms.TextBox txtLabel;
         private System.Windows.Forms.Button btnCadastro;
     }
 }
